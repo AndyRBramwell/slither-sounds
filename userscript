@@ -1,0 +1,25 @@
+// ==UserScript==
+// @name         Andy Mods
+// @namespace    http://www.andrewbramwell.co.uk
+// @version      1.0
+// @description  Slither.io Mods by Andrew Bramwell
+// @author       Slitherio.org
+// @noframes
+// @match        http://slither.io/*
+// @match        https://slither.io/*
+// @run-at       document-body
+// @grant        none
+// ==/UserScript==
+
+(function() {
+    'use strict';
+
+    var audio = new Audio('http://www.andrewbramwell.co.uk/SMB-SP.mp3');
+    window.addEventListener("mousedown", function () {
+        audio.play();
+    }, false);
+    window.addEventListener("mouseup", function () {
+        audio.pause();
+        audio.currentTime = 0;
+    }, false);
+})();
